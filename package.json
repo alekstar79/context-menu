@@ -1,0 +1,51 @@
+{
+  "name": "context-menu",
+  "description": "Awesome context menu",
+  "author": "alekstar79",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "cross-env NODE_ENV=development nuxt",
+    "build": "cross-env NODE_ENV=production nuxt build",
+    "start": "cross-env NODE_ENV=production nuxt start"
+  },
+  "dependencies": {
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/i18n": "^7.1.0",
+    "@nuxtjs/router": "^1.6.1",
+    "normalize.css": "^8.0.1",
+    "nuxt-edge": "^2.16.0-27720022.54e852f",
+    "snapsvg-cjs": "0.0.6",
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.1",
+    "vue-svg-loader": "^0.16.0",
+    "vuetify": "^2.5.10",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/eslint-parser": "^7.15.8",
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/runtime-corejs3": "^7.15.4",
+    "@nuxt/types": "^2.15.8",
+    "@nuxtjs/eslint-config": "^6.0.1",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/vuetify": "^1.12.1",
+    "@vue/test-utils": "^1.2.2",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "core-js": "^3.19.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-vue": "^7.20.0",
+    "webpack": "^4.46.0"
+  },
+  "packageManager": "yarn@3.3.0",
+  "resolutions": {
+    "core-js": "3.21.1"
+  }
+}

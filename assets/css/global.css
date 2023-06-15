@@ -1,0 +1,105 @@
+html {
+  --scrollbarBG: #ecf0f2;
+  --thumbBG: #c3cfd5;
+}
+
+/* noinspection CssUnknownProperty */
+html, body {
+  scrollbar-width: none;
+  overflow: auto;
+}
+
+body, .v-application {
+  font-family: -apple-system, BlinkMacSystemFont, ubuntu, 'Roboto', 'Helvetica Neue', 'Fira Sans', 'Noto Sans Bengali', 'Noto Sans Hebrew', 'Noto Sans Kannada', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+html.fixed {
+  position: fixed;
+}
+
+body.theme--light {
+  background-color: #F5F5F5;
+}
+
+body.theme--dark {
+  background-color: #242424;
+}
+
+.theme--light.v-application.app-root {
+  background: #F5F5F5 !important;
+  color: rgba(0, 0, 0, .87);
+}
+
+.theme--dark.v-application.app-root {
+  background: #242424 !important;
+  color: #FFF;
+}
+
+.theme--light.v-app-bar.v-toolbar {
+  background: #F5F5F5 !important;
+  color: rgba(0, 0, 0, .87);
+}
+
+.theme--dark.v-app-bar.v-toolbar {
+  background: #242424 !important;
+  color: #fff;
+}
+
+.v-application.app-root .v-dialog.v-dialog--fullscreen {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: -70px;
+  transform: translateY(70px);
+  max-width: unset;
+}
+
+.hidden-html {
+  overflow: hidden;
+}
+
+.screen_100 {
+  height: 100vh;
+}
+
+a:focus, a:active, button:active, button:focus {
+  outline-style: none !important;
+  outline-width: 0 !important;
+}
+
+a::-moz-focus-inner, button::-moz-focus-inner {
+  border: 0 !important;
+}
+
+@media screen and (max-width: 320px) {
+  select:focus, textarea:focus, input:focus {
+    font-size: 16px;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select:focus, textarea:focus, input:focus {
+    font-size: 16px;
+  }
+}
+
+@supports (padding: max(0px, 0px)) {
+  body, header, footer {
+    padding-left: min(0vmin, env(safe-area-inset-left));
+    padding-right: min(0vmin, env(safe-area-inset-right));
+  }
+}

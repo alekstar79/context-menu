@@ -44,7 +44,7 @@
 ## 📦 Installation
 
 ```bash
-npm install context-menu
+npm install @alekstar79/context-menu
 ```
 
 The library has an optional peer dependency on vue. If you are using the Vue component, install Vue 3 as well:

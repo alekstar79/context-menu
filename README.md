@@ -57,7 +57,7 @@ npm install vue@^3
 1. Vanilla JS / TypeScript
 
 ```ts
-import { defineConfig, Manager } from 'context-menu-ts'
+import { defineConfig, Manager } from '@alekstar79/context-menu'
 
 const config = defineConfig({
   sprite: '/path/to/icons.svg',  // path to SVG sprite
@@ -111,8 +111,8 @@ window.addEventListener('contextmenu', (e) => {
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import ContextMenu from 'context-menu/vue'
-import type { ISector } from 'context-menu'
+import type { ISector } from '@alekstar79/context-menu/context-menu'
+import ContextMenu from '@alekstar79/context-menu/context-menu/vue'
 
 const sprite = '/icons.svg'
 const sectors: ISector[] = [

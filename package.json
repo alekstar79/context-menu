@@ -1,13 +1,21 @@
 {
   "name": "@alekstar79/context-menu",
   "description": "Context Menu TS is a customizable radial context menu for web applications, written in TypeScript.",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "type": "module",
   "license": "MIT",
   "author": "Aleksey Tarasenko <alekstar79@yandex.ru>",
   "main": "lib/context-menu.js",
   "module": "lib/context-menu.js",
   "types": "lib/index.d.ts",
+  "homepage": "https://github.com/alekstar79/context-menu.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alekstar79/context-menu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alekstar79/context-menu/issues"
+  },
   "exports": {
     ".": {
       "import": "./lib/context-menu.js",

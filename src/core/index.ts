@@ -1,0 +1,6 @@
+export { Matrix } from './matrix'
+export { mina } from './easing'
+export { animate } from './animate'
+export { parse } from './parse'
+export { Svg } from './svg'
+export type { Element, Paper, Fragment } from './svg'

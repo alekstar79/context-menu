@@ -1,51 +1,72 @@
 {
   "name": "@alekstar79/context-menu",
-  "description": "Awesome context menu",
-  "author": "alekstar79",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "serve": "cross-env NODE_ENV=development nuxt",
-    "build": "cross-env NODE_ENV=production nuxt build",
-    "start": "cross-env NODE_ENV=production nuxt start"
+  "description": "Context Menu TS is a customizable radial context menu for web applications, written in TypeScript.",
+  "version": "2.0.0",
+  "type": "module",
+  "license": "MIT",
+  "author": "Aleksey Tarasenko <alekstar79@yandex.ru>",
+  "main": "lib/context-menu.js",
+  "module": "lib/context-menu.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/context-menu.js",
+      "types": "./lib/index.d.ts"
+    },
+    "./vue": {
+      "import": "./lib/context-menu-vue.js",
+      "types": "./lib/vue.d.ts"
+    },
+    "./lib/styles.css": "./lib/styles.css"
   },
-  "dependencies": {
-    "@nuxtjs/dotenv": "^1.4.1",
-    "@nuxtjs/i18n": "^7.1.0",
-    "@nuxtjs/router": "^1.6.1",
-    "normalize.css": "^8.0.1",
-    "nuxt-edge": "^2.16.0-27720022.54e852f",
-    "snapsvg-cjs": "0.0.6",
-    "vue": "^2.6.14",
-    "vue-router": "^3.5.1",
-    "vue-svg-loader": "^0.16.0",
-    "vuetify": "^2.5.10",
-    "vuex": "^3.6.2"
+  "keywords": [
+    "typescript",
+    "radial",
+    "context",
+    "menu",
+    "vue"
+  ],
+  "files": [
+    "lib/",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -p tsconfig.lib.json --noEmit && vite build --config vite.lib.config.ts",
+    "build:demo": "vite build --config vite.config.ts",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:ui": "vitest run --ui",
+    "test:coverage": "vitest run --coverage"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.13"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    }
   },
   "devDependencies": {
-    "@babel/cli": "^7.15.7",
-    "@babel/core": "^7.15.8",
-    "@babel/eslint-parser": "^7.15.8",
-    "@babel/plugin-transform-runtime": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
-    "@babel/runtime-corejs3": "^7.15.4",
-    "@nuxt/types": "^2.15.8",
-    "@nuxtjs/eslint-config": "^6.0.1",
-    "@nuxtjs/eslint-module": "^3.0.2",
-    "@nuxtjs/vuetify": "^1.12.1",
-    "@vue/test-utils": "^1.2.2",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.3",
-    "babel-plugin-module-resolver": "^4.1.0",
-    "core-js": "^3.19.0",
-    "cross-env": "^7.0.3",
-    "eslint": "^7.32.0",
-    "eslint-plugin-nuxt": "^2.0.0",
-    "eslint-plugin-vue": "^7.20.0",
-    "webpack": "^4.46.0"
+    "@testing-library/jest-dom": "^6.9.1",
+    "@types/node": "^25.2.3",
+    "@vitejs/plugin-vue": "^6.0.4",
+    "@vitest/coverage-v8": "^4.0.18",
+    "@vitest/ui": "^4.0.18",
+    "jsdom": "^28.1.0",
+    "sass": "^1.75.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^4.5.3",
+    "vitest": "^4.0.18",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.2.8"
   },
   "packageManager": "yarn@3.3.0",
-  "resolutions": {
-    "core-js": "3.21.1"
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   }
 }

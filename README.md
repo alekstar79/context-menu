@@ -11,7 +11,7 @@
 > The project includes full TypeScript support (types are exported) and provides a simple API for controlling the menu (show/hide, event subscription).
 > The library is lightweight, has no required dependencies (Vue 3 is optional), and can be easily integrated into existing projects.
 
-![slider](menu.svg)
+![slider](./menu.svg)
 
 **[View Live Demo](https://alekstar79.github.io/context-menu)**
 

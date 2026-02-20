@@ -17,7 +17,7 @@ if (app) {
   app.innerHTML = content
 
   const config = defineConfig({
-    sprite: '/img/radialnav/icons.svg',
+    sprite: './img/radialnav/icons.svg',
     innerRadius: 75,
     outerRadius: 150,
 

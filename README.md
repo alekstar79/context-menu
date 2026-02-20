@@ -13,7 +13,7 @@
 
 ![slider](menu.svg)
 
-**[View Live Demo](https://alekstar79.github.io/circular-menu)**
+**[View Live Demo](https://alekstar79.github.io/context-menu)**
 
 <!-- TOC -->
 * [Context Menu TS (Vanilla/Vue3)](#context-menu-ts-vanillavue3)

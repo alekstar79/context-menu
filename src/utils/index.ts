@@ -87,3 +87,12 @@ export function measureTextLengthOnLine(text: string): number {
 
   return length
 }
+
+/**
+ * @template T
+ * @param {PromiseLike<T> | HTMLElement} value
+ * @returns boolean
+ */
+export function isPromiseLike<T extends any>(value: any): value is PromiseLike<T> {
+  return value && (value as PromiseLike<T>).then !== undefined
+}

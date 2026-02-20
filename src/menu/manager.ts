@@ -1,3 +1,4 @@
+import { isPromiseLike } from '@/utils'
 import { Builder } from './builder'
 import { IConfig } from './config'
 
@@ -5,21 +6,24 @@ export class Manager
 {
   private menu: Builder
 
-  constructor(container: HTMLElement, config: IConfig)
+  constructor(container: HTMLElement | PromiseLike<HTMLElement>, config: IConfig)
   {
     this.menu = new Builder(config)
-    container.appendChild(this.menu.element)
+
+    isPromiseLike(container)
+      ? container.then((c) => c.appendChild(this.menu.element))
+      : container.appendChild(this.menu.element)
 
     if (config.autoBindContextMenu !== false) {
       this.bindEvents()
     }
   }
 
-  private bindEvents()
+  public bindEvents(el: HTMLElement | Window = window)
   {
-    window.addEventListener('contextmenu', (e) => {
+    el.addEventListener('contextmenu', (e) => {
       e.preventDefault()
-      this.menu.show(e)
+      this.menu.show(e as MouseEvent)
     })
   }
 

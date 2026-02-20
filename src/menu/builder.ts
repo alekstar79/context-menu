@@ -1,6 +1,6 @@
 import type { ICentralButton, IConfig, ISector } from './config'
 
-import { getHintFontMetrics, measureTextLengthOnLine } from '@/utils/text-metrics'
+import { getHintFontMetrics, measureTextLengthOnLine } from '@/utils'
 import { animate, Matrix, mina, parse, Svg } from '@/core'
 
 interface HintData {

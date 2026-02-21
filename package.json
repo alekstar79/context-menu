@@ -1,7 +1,7 @@
 {
   "name": "@alekstar79/context-menu",
   "description": "Context Menu TS is a customizable radial context menu for web applications, written in TypeScript.",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "type": "module",
   "license": "MIT",
   "author": "Aleksey Tarasenko <alekstar79@yandex.ru>",

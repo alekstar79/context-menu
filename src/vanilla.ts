@@ -23,6 +23,7 @@ if (app) {
 
     // color: 'orange',
     opacity: 0.7,
+    zIndex: 9,
 
     hintPadding: 2,
     // Global overrides for all icons

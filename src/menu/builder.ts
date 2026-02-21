@@ -80,7 +80,7 @@ export class Builder
   private createMenuElement(): HTMLElement
   {
     const div = document.createElement('div')
-    div.className = 'context theme--light hidden'
+    div.className = 'context hidden'
     div.style.position = 'fixed'
     div.style.top = '0'
     div.style.left = '0'
@@ -88,6 +88,10 @@ export class Builder
     div.style.height = '100vh'
     div.style.overflow = 'visible'
     div.style.pointerEvents = 'auto'
+
+    if (this.config.zIndex && !isNaN(this.config.zIndex)) {
+      div.style.zIndex = `${this.config.zIndex}`
+    }
 
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
     svg.setAttribute('width', this.size.toString())
@@ -112,6 +116,12 @@ export class Builder
 
     svg.addEventListener('click', (e) => {
       e.stopPropagation()
+      this.hide()
+    })
+
+    div.addEventListener('contextmenu', (e) => {
+      e.stopPropagation()
+      e.preventDefault()
       this.hide()
     })
 

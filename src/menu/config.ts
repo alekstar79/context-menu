@@ -10,6 +10,7 @@ export interface IConfig {
   hintPadding?: number;
   centralButton?: ICentralButton;
   autoBindContextMenu?: boolean;
+  zIndex?: number;
 }
 
 export interface ICentralButton {

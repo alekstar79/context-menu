@@ -6,6 +6,8 @@ export class Manager
 {
   private menu: Builder
 
+  public shown: boolean = false
+
   constructor(container: HTMLElement | PromiseLike<HTMLElement>, config: IConfig)
   {
     this.menu = new Builder(config)
@@ -23,7 +25,7 @@ export class Manager
   {
     el.addEventListener('contextmenu', (e) => {
       e.preventDefault()
-      this.menu.show(e as MouseEvent)
+      this.toggle(e as PointerEvent)
     })
   }
 
@@ -32,13 +34,22 @@ export class Manager
     this.menu.on(event, callback)
   }
 
+  public toggle(event: PointerEvent)
+  {
+    this.shown ? this.menu.hide() : this.menu.show(event)
+  }
+
   public show(event: PointerEvent)
   {
+    this.shown = true
+
     this.menu.show(event)
   }
 
   public hide()
   {
+    this.shown = false
+
     this.menu.hide()
   }
 }

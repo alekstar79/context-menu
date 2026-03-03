@@ -4,7 +4,7 @@ import { IConfig } from './config'
 
 export class Manager
 {
-  private menu: Builder
+  public menu: Builder
 
   public shown: boolean = false
 

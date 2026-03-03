@@ -44,7 +44,9 @@ function describeSector(x: number, y: number, r: number, r2: number, startAngle:
 
 export class Builder
 {
-  private readonly config: IConfig
+  public config: IConfig
+  public element: HTMLElement
+
   private readonly events: { [key: string]: Function[] } = {}
 
   private readonly container: Svg.Paper
@@ -54,11 +56,9 @@ export class Builder
   private readonly size: number = 500
   private readonly c = this.size / 2
 
-  public element: HTMLElement
-  private area: Svg.Paper
-
   private duration = 300
 
+  private area: Svg.Paper
   private icons: Svg.Fragment | null = null
   private theme = 'light'
 
@@ -156,7 +156,7 @@ export class Builder
     }
   }
 
-  private updateButtons(): void
+  public updateButtons(): void
   {
     if (!this.icons || !this.container) return
 

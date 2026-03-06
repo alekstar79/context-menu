@@ -1,2 +1,4 @@
-export { defineConfig, type ISector, type IConfig, type ICentralButton } from './menu/config'
+export type { ISector, ICentralButton, IConfig } from './menu/config'
+
+export { defineConfig } from './menu/config'
 export { Manager } from './menu/manager'

@@ -1,18 +1,3 @@
-export interface IConfig {
-  sectors: ISector[];
-  sprite: string;
-  innerRadius: number;
-  outerRadius: number;
-  opacity: number;
-  iconScale?: number;
-  iconRadius?: number;
-  color?: string;
-  hintPadding?: number;
-  centralButton?: ICentralButton;
-  autoBindContextMenu?: boolean;
-  zIndex?: number;
-}
-
 export interface ICentralButton {
   icon: string;
   hint?: string;
@@ -38,6 +23,21 @@ export interface ISector {
   iconRadius?: number;
   hintPadding?: number;
   hintVerticalOffset?: number;
+}
+
+export interface IConfig {
+  sectors: ISector[];
+  sprite: string;
+  innerRadius: number;
+  outerRadius: number;
+  opacity: number;
+  iconScale?: number;
+  iconRadius?: number;
+  color?: string;
+  hintPadding?: number;
+  centralButton?: ICentralButton;
+  autoBindContextMenu?: boolean;
+  zIndex?: number;
 }
 
 const defaultConfig: IConfig = {

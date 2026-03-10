@@ -139,20 +139,32 @@ export class Builder
   private async init(): Promise<void>
   {
     await this.loadIcons()
+
     this.updateButtons()
   }
 
-  private async loadIcons(): Promise<void>
+  public async loadIcons(sprite?: string): Promise<void>
   {
     if (this.icons) return
 
+    sprite ||= this.config.sprite
+
     try {
-      const response = await fetch(this.config.sprite)
+      const response = await fetch(sprite)
       if (response.ok) {
-        this.icons = parse(await response.text())
+        this.setIcons(await response.text())
       }
     } catch (e) {
       console.error('Failed to load icons:', e)
+    }
+  }
+
+  public setIcons(sprite: string)
+  {
+    try {
+      this.icons = parse(sprite)
+    } catch (e) {
+      console.error('Failed to parse icons:', e)
     }
   }
 

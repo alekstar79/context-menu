@@ -21,6 +21,11 @@ export class Manager
     }
   }
 
+  public setIcons(sprite: string)
+  {
+    this.menu.setIcons(sprite)
+  }
+
   public bindEvents(el: HTMLElement | Window = window)
   {
     el.addEventListener('contextmenu', (e) => {

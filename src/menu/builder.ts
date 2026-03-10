@@ -145,8 +145,6 @@ export class Builder
 
   public async loadIcons(sprite?: string): Promise<void>
   {
-    if (this.icons) return
-
     sprite ||= this.config.sprite
 
     try {
@@ -161,6 +159,8 @@ export class Builder
 
   public setIcons(sprite: string)
   {
+    if (this.icons) return
+
     try {
       this.icons = parse(sprite)
     } catch (e) {
